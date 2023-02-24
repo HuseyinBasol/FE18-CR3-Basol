@@ -1,5 +1,6 @@
 export interface IMenu {
     name: string;
-    age: number;
+    price: number;
     image: string;
+    description: string;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { CartService } from '../cart.service';
 import { IMenu } from '../IMenu';
 import { menu } from '../menu/menu';
 
@@ -12,7 +13,9 @@ export class DetailsComponent implements OnInit {
   menu: IMenu = {} as IMenu;
   id: number = 0;
 
-  constructor(private route: ActivatedRoute){ }
+  constructor (private route: ActivatedRoute,private cs: CartService ){ }
+
+  
 
 
   ngOnInit(): void {
@@ -21,4 +24,9 @@ export class DetailsComponent implements OnInit {
       this.menu = menu[this.id];
     });
   }
+  addToCart(obj: IMenu) {
+    alert("added");
+    this.cs.addToCart(obj);
+     }
+  
 }

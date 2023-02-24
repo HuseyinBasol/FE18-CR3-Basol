@@ -6,6 +6,8 @@
                 <img src="{{ menu.image }}" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title">{{ menu.name }}</h5>
+                  <h5 class="card-title">{{ menu.price }}</h5>
+                  <h5 class="card-title">{{ menu.description }}</h5>
                 </div>
                 <p class="btn btn-success" routerLink="/details/{{ id }}" >Details</p>
                 <p class="btn btn-primary" (click)="addToCart(menu)">Add to cart</p>

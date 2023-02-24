@@ -7,8 +7,8 @@
           <img src="{{ menu.image }}" alt="...">
         </div>
         <div class="flex-grow-1 ms-3">
-          {{ menu.name}} {{ menu.age}} <br>
-          <p  class="btn btn-warning">Add to cart</p>
+          {{ menu.name}} {{ menu.price}} {{ menu.description }} <br>
+          <p  class="btn btn-warning" (click)="addToCart(menu)">Add to cart</p>
         </div>
       </div>
 
