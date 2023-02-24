@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <div *ngFor="let menu of menu; index as id">
+
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="{{ menu.image }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">{{ menu.name }}</h5>
+                </div>
+                <p class="btn btn-success" routerLink="/details/{{ id }}" >Details</p>
+                <p class="btn btn-primary" (click)="addToCart(menu)">Add to cart</p>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
